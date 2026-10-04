@@ -1,0 +1,32 @@
+# ============================================================
+# 骨龄检测项目 · 依赖
+# ============================================================
+#
+# 安装方式（分两步，因为 PyTorch 的 CUDA 版本不在默认 PyPI 源里）：
+#
+#   1) 先装 GPU 版 PyTorch（cu126 对应 CUDA 12.6）
+#      pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+#
+#   2) 再装其余依赖
+#      pip install -r requirements.txt
+#
+# 如果没有 NVIDIA GPU，把第 1 步换成 pip install torch torchvision
+# （CPU 版也能跑推理，但训练会很慢）
+#
+# ------------------------------------------------------------
+# 实测通过的版本（Windows 11 / Python 3.12.10 / RTX 4060 Laptop 8GB）
+#   torch         2.14.1+cu126      torchvision  0.29.1+cu126
+#   ultralytics   8.4.171           opencv-python 5.0.0.93
+#   numpy         2.5.3             pillow       12.3.0
+#   matplotlib    3.11.2            pyyaml       6.0.3
+#   lxml          6.1.3             tqdm         4.70.1
+# ------------------------------------------------------------
+
+ultralytics>=8.4.0
+opencv-python>=4.9.0
+pillow>=10.0.0
+numpy>=1.26
+matplotlib>=3.8
+lxml>=5.0
+pyyaml>=6.0
+tqdm>=4.66
